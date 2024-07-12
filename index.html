@@ -4,12 +4,13 @@
 <body>
     <script>
         function start(){
-            if (document.body.requestFullscreen) {
-              document.body.requestFullscreen();
-            } else if (elem.webkitRequestFullscreen) {
-              document.body.webkitRequestFullscreen();
-            } else if (elem.msRequestFullscreen) {
-              document.body.msRequestFullscreen();
+            document.getElementById("ionknow").style.visibility="hidden";
+            if (document.documentElement.requestFullscreen) {
+              document.documentElement.requestFullscreen();
+            } else if (document.documentElement.webkitRequestFullscreen) {
+              document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) {
+              document.documentElement.msRequestFullscreen();
             }
         }
         function synctime(){
@@ -29,4 +30,5 @@
     ">
         <h1 id="time" style="scale: 10;">bre</h1>
     </div>
+    <button onclick="start()" id="ionknow">click cuz yes</button>
 </body>
